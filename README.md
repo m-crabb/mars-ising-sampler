@@ -13,7 +13,7 @@ ring-fenced repository for my dissertation):
 
 $$
 p(x) \propto \exp\left(\sigma x^\top A x + \mathrm{bias} \sum_i x_i\right),
-\qquad x_i \in {-1, +1}.
+\qquad x_i \in \{-1, +1\}.
 $$
 
 Here $A$ is the symmetric nearest-neighbour adjacency matrix on the torus, so
