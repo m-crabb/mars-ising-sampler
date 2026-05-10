@@ -1,0 +1,32 @@
+[project]
+name = "mars-ising-sampler"
+version = "0.1.0"
+description = "Neural CTMC samplers for the 10x10 critical Ising model"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ising*"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge", "pytorch"]
+platforms = ["linux-64", "osx-arm64"]
+
+[tool.pixi.dependencies]
+python = "3.11.*"
+numpy = ">=2.4.3,<3"
+matplotlib = ">=3.10.8,<4"
+pytorch = ">=2.10.0,<3"
+
+[tool.pixi.tasks]
+evaluate = "python -m ising.evaluate --model all"
+evaluate-small = "python -m ising.evaluate --model conv_global --n-samples 64 --reference-samples 64 --reference-burn-in 20 --reference-thin 1 --out-dir results/smoke"
+train-letf-debug = "python -m ising.train --config letf --steps 100 --batch-size 8 --outer-batch-size 8 --n-euler-steps 8 --output-dir runs/letf-debug"

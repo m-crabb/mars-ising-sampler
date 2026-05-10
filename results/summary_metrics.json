@@ -1,0 +1,50 @@
+{
+  "letf": {
+    "run_id": "sieo6odf",
+    "architecture": "locally equivariant transformer",
+    "eval_ess": 3653.62841796875,
+    "eval_ess_fraction": 0.73072568359375,
+    "free_energy_per_site": -2.0999011993408203,
+    "internal_energy_per_site": -1.513378620147705,
+    "entropy_per_site": 0.2616477310657501,
+    "label": "transformer",
+    "raw_energy_mean": -1.4236160516738892,
+    "raw_energy_std": 0.2780429720878601,
+    "raw_abs_magnetisation_mean": 0.6968280076980591
+  },
+  "conv_global": {
+    "run_id": "6z5uzcn8",
+    "architecture": "deep convolution with leave-one-out global context",
+    "eval_ess": 2416.8544921875,
+    "eval_ess_fraction": 0.4833708984375,
+    "free_energy_per_site": -2.100327253341675,
+    "internal_energy_per_site": -1.4735625982284546,
+    "entropy_per_site": 0.27959969639778137,
+    "label": "conv + global",
+    "raw_energy_mean": -1.4018800258636475,
+    "raw_energy_std": 0.2675577998161316,
+    "raw_abs_magnetisation_mean": 0.6799280047416687
+  },
+  "conv_local": {
+    "run_id": "69rkjhzx",
+    "architecture": "deep convolution without global context",
+    "eval_ess": 1462.7459716796875,
+    "eval_ess_fraction": 0.2925491943359375,
+    "free_energy_per_site": -2.0883138179779053,
+    "internal_energy_per_site": -1.4935368299484253,
+    "entropy_per_site": 0.2653300166130066,
+    "label": "conv local",
+    "raw_energy_mean": -1.2323360443115234,
+    "raw_energy_std": 0.2808469831943512,
+    "raw_abs_magnetisation_mean": 0.4993399381637573
+  },
+  "observable_overlay_reference": {
+    "sampler": "Wolff cluster MCMC",
+    "n_samples": 5000,
+    "burn_in_cluster_flips": 2000,
+    "thin_cluster_flips": 5,
+    "energy_mean": -1.5080801248550415,
+    "energy_std": 0.2509170174598694,
+    "abs_magnetisation_mean": 0.7770520448684692
+  }
+}
